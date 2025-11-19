@@ -1,0 +1,115 @@
+import { Link } from "react-router-dom";
+import { Facebook, Twitter, Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react";
+
+export const Footer = () => {
+  const services = [
+    { name: "Forex Trading", href: "/services/forex" },
+    { name: "Crypto Trading", href: "/services/crypto" },
+    { name: "Comex Trading", href: "/services/comex" },
+    { name: "Indices Trading", href: "/services/indices" },
+  ];
+
+  const quickLinks = [
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
+    { name: "Market Insights", href: "/market-insights" },
+    { name: "Contact", href: "/contact" },
+  ];
+
+  return (
+    <footer className="bg-card border-t border-border">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+                <span className="text-2xl font-bold text-primary-foreground">F</span>
+              </div>
+              <span className="text-xl font-bold">Fintrex</span>
+            </div>
+            <p className="text-muted-foreground text-sm">
+              Smart Signals. Deep Research. Confident Trading.
+            </p>
+            <p className="text-muted-foreground text-sm">
+              Empowering traders worldwide with expert signals and market intelligence.
+            </p>
+            <div className="flex space-x-4">
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Facebook size={20} />
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Twitter size={20} />
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Instagram size={20} />
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Youtube size={20} />
+              </a>
+            </div>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Our Services</h3>
+            <ul className="space-y-2">
+              {services.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    to={service.href}
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+            <ul className="space-y-3">
+              <li className="flex items-start space-x-2 text-sm text-muted-foreground">
+                <MapPin size={16} className="mt-1 flex-shrink-0" />
+                <span>Jl. Sunset Road No.815, Kuta, Bali 80361</span>
+              </li>
+              <li className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <Phone size={16} className="flex-shrink-0" />
+                <span>(021) 231 - 2670</span>
+              </li>
+              <li className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <Mail size={16} className="flex-shrink-0" />
+                <span>support@example.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-border mt-8 pt-8 text-center">
+          <p className="text-muted-foreground text-sm">
+            © {new Date().getFullYear()} Fintrex Forex Solutions. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
