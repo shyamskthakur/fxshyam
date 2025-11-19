@@ -10,6 +10,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import fintrexLogo from "@/assets/fintrex-logo.jpg";
 
 export const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -26,11 +27,12 @@ export const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-2xl font-bold text-primary-foreground">F</span>
-            </div>
-            <span className="text-xl font-bold text-foreground">Fintrex</span>
+          <Link to="/" className="flex items-center space-x-3 group">
+            <img 
+              src={fintrexLogo} 
+              alt="Fintrex Forex Solutions" 
+              className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+            />
           </Link>
 
           {/* Desktop Navigation */}
