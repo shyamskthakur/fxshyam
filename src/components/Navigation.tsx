@@ -10,7 +10,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import fintrexLogo from "@/assets/fintrex-logo.jpg";
+import fintrexLogo from "@/assets/fintrex-logo.png";
 
 export const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

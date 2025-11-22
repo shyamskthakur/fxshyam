@@ -9,22 +9,22 @@ const About = () => {
     {
       icon: Target,
       title: "Our Mission",
-      description: "Empowering traders with advanced market research, real-time forex signals, and intelligent strategies for consistent success.",
+      description: "Providing premium trading signals backed by advanced market research, expert analysis, and intelligent strategies for consistent trading success.",
     },
     {
       icon: Eye,
       title: "Our Vision",
-      description: "To build a global community of confident and successful traders through innovation, transparency, and expert financial intelligence.",
+      description: "To become the world's most trusted signal provider, building a global community of confident traders through innovation, transparency, and expert market intelligence.",
     },
     {
       icon: Users,
-      title: "Expert Team",
-      description: "Powered by 20+ professional analysts with 10+ years of experience, we deliver deep market insights and intelligent trading signals worldwide.",
+      title: "Expert Signal Team",
+      description: "Powered by 20+ professional analysts with 10+ years of experience, we deliver high-accuracy signals and deep market intelligence to traders worldwide.",
     },
     {
       icon: Award,
-      title: "Proven Track Record",
-      description: "With a 98% success rate and 50,000+ active traders, we've established ourselves as a trusted leader in forex solutions.",
+      title: "Proven Results",
+      description: "With a 98% signal accuracy rate and 50,000+ active subscribers, we've established ourselves as a trusted premium signal provider.",
     },
   ];
 
@@ -40,7 +40,7 @@ const About = () => {
               About <span className="text-gradient">Fintrex</span>
             </h1>
             <p className="text-xl text-muted-foreground animate-fade-in">
-              The smartest way to master forex trading through expert guidance and innovative solutions.
+              Your premium signal provider delivering expert analysis and profitable trading opportunities.
             </p>
           </div>
         </div>
@@ -51,12 +51,12 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
             <div className="animate-slide-up">
-              <h2 className="text-4xl font-bold mb-6">The Smartest Way to Master Forex Trading</h2>
+            <h2 className="text-4xl font-bold mb-6">Your Trusted Premium Signal Provider</h2>
               <p className="text-muted-foreground text-lg mb-6">
-                Empowering traders worldwide with expert trading signals, in-depth market research, and proven forex strategies designed by professionals with over a decade of experience.
+                Empowering traders worldwide with premium trading signals, in-depth market research, and proven forex strategies designed by professional analysts with over a decade of experience.
               </p>
               <p className="text-muted-foreground text-lg">
-                At <strong className="text-foreground">Fintrex Forex Solutions</strong>, we combine technology, intelligence, and global market insights to help beginners and experienced traders make smarter, faster, and more profitable trading decisions with complete risk management support.
+                At <strong className="text-foreground">Fintrex Forex Solutions</strong>, we deliver high-accuracy trading signals backed by expert analysis and advanced market intelligence. Our signal service helps beginners and experienced traders make smarter, faster, and more profitable trading decisions.
               </p>
             </div>
             <div className="animate-fade-in">
@@ -105,16 +105,16 @@ const About = () => {
               </div>
 
               <div className="gradient-card p-8 rounded-xl border border-border shadow-card">
-                <h3 className="text-2xl font-semibold mb-4 text-gradient">Comprehensive Support</h3>
+                <h3 className="text-2xl font-semibold mb-4 text-gradient">Complete Signal Service</h3>
                 <p className="text-muted-foreground text-lg">
-                  From beginners learning forex trading basics to experienced professionals seeking advanced strategies, we provide complete trading support including risk management, market research, and signal intelligence services.
+                  From beginners learning to follow signals to experienced traders seeking advanced insights, we provide complete signal services including risk management parameters, market research, and professional analysis with every signal.
                 </p>
               </div>
 
               <div className="gradient-card p-8 rounded-xl border border-border shadow-card">
-                <h3 className="text-2xl font-semibold mb-4 text-gradient">Global Market Coverage</h3>
+                <h3 className="text-2xl font-semibold mb-4 text-gradient">24/7 Signal Delivery</h3>
                 <p className="text-muted-foreground text-lg">
-                  We monitor all major forex sessions 24/7, ensuring you never miss profitable opportunities. Whether you're trading currencies, cryptocurrencies, commodities, or indices, we've got you covered with expert insights.
+                  We monitor all major forex sessions 24/7, ensuring you never miss profitable signals. Whether you trade currencies, cryptocurrencies, commodities, or indices, receive timely signals with complete entry and exit parameters.
                 </p>
               </div>
             </div>

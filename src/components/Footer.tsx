@@ -3,10 +3,10 @@ import { Facebook, Twitter, Instagram, Youtube, Mail, Phone, MapPin } from "luci
 
 export const Footer = () => {
   const services = [
-    { name: "Forex Trading", href: "/services/forex" },
-    { name: "Crypto Trading", href: "/services/crypto" },
-    { name: "Comex Trading", href: "/services/comex" },
-    { name: "Indices Trading", href: "/services/indices" },
+    { name: "Forex Signals", href: "/services/forex" },
+    { name: "Crypto Signals", href: "/services/crypto" },
+    { name: "Comex Signals", href: "/services/comex" },
+    { name: "Indices Signals", href: "/services/indices" },
   ];
 
   const quickLinks = [
@@ -29,10 +29,10 @@ export const Footer = () => {
               <span className="text-xl font-bold">Fintrex</span>
             </div>
             <p className="text-muted-foreground text-sm">
-              Smart Signals. Deep Research. Confident Trading.
+              Premium Signal Provider. Expert Analysis. Proven Results.
             </p>
             <p className="text-muted-foreground text-sm">
-              Empowering traders worldwide with expert signals and market intelligence.
+              Delivering professional trading signals and market intelligence to traders worldwide.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">

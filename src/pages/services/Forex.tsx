@@ -54,14 +54,14 @@ const Forex = () => {
               <TrendingUp className="text-primary" size={48} />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
-              Forex Trading <span className="text-gradient">Solutions</span>
+              Forex Signal <span className="text-gradient">Provider</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 animate-fade-in">
-              Trade global currencies with expert insights, risk management, and real-time signals from Fintrex's professional analysts.
+              Receive premium forex signals with expert insights, risk management, and real-time alerts from Fintrex's professional analyst team.
             </p>
             <Link to="/contact">
-              <Button size="lg" className="gradient-primary shadow-glow text-lg px-8">
-                Start Trading Today
+              <Button size="lg" className="gradient-primary shadow-glow text-lg px-8 hover:scale-105 transition-transform">
+                Get Signals Today
               </Button>
             </Link>
           </div>
@@ -115,7 +115,7 @@ const Forex = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold mb-12 text-center">How Fintrex Forex Trading Works</h2>
+            <h2 className="text-4xl font-bold mb-12 text-center">How Fintrex Signal Service Works</h2>
             
             <div className="space-y-8">
               <div className="flex items-start space-x-6">
@@ -125,7 +125,7 @@ const Forex = () => {
                 <div>
                   <h3 className="text-2xl font-semibold mb-3">Sign Up & Get Started</h3>
                   <p className="text-muted-foreground text-lg">
-                    Create your account and gain instant access to our trading platform. Complete your profile and set your trading preferences to receive personalized signals.
+                    Create your account and gain instant access to our signal service. Complete your profile and set your trading preferences to receive personalized signals tailored to your strategy.
                   </p>
                 </div>
               </div>
@@ -173,13 +173,13 @@ const Forex = () => {
       {/* CTA Section */}
       <section className="py-20 gradient-hero">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Forex Trading?</h2>
+          <h2 className="text-4xl font-bold mb-6">Ready to Receive Premium Forex Signals?</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join thousands of successful traders who trust Fintrex for their forex trading needs.
+            Join thousands of successful traders who trust Fintrex as their signal provider.
           </p>
           <Link to="/contact">
-            <Button size="lg" className="gradient-primary shadow-glow text-lg px-8">
-              Get Started Now
+            <Button size="lg" className="gradient-primary shadow-glow text-lg px-8 hover:scale-105 transition-transform">
+              Subscribe to Signals
             </Button>
           </Link>
         </div>

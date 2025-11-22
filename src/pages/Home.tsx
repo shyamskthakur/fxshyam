@@ -6,31 +6,34 @@ import { Button } from "@/components/ui/button";
 import { TrendingUp, Shield, BarChart3, Bitcoin, Coins, TrendingDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-forex.jpg";
+import signalsDashboard from "@/assets/signals-dashboard.jpg";
+import teamAnalysis from "@/assets/team-analysis.jpg";
+import growthVisualization from "@/assets/growth-visualization.jpg";
 
 const Home = () => {
   const services = [
     {
       icon: TrendingUp,
-      title: "Forex Trading",
-      description: "Trade global currencies with expert insights, risk management, and real-time signals.",
+      title: "Forex Signals",
+      description: "Receive accurate real-time forex signals with entry points, stop loss, and take profit levels from expert analysts.",
       href: "/services/forex",
     },
     {
       icon: Bitcoin,
-      title: "Crypto Trading",
-      description: "Navigate the digital market confidently with our professional crypto signals and analysis.",
+      title: "Crypto Signals",
+      description: "Navigate the digital market confidently with our professional crypto signals and technical analysis.",
       href: "/services/crypto",
     },
     {
       icon: Coins,
-      title: "Comex Trading",
-      description: "Gain access to gold, silver, and commodity markets with precise entry and exit strategies.",
+      title: "Comex Signals",
+      description: "Get precise commodity signals for gold, silver, and metals with clear entry and exit strategies.",
       href: "/services/comex",
     },
     {
       icon: BarChart3,
-      title: "Indices Trading",
-      description: "Trade top global indices and diversify your portfolio with our expert research-backed guidance.",
+      title: "Indices Signals",
+      description: "Trade global indices confidently with our expert research-backed signals and market insights.",
       href: "/services/indices",
     },
   ];
@@ -38,18 +41,18 @@ const Home = () => {
   const features = [
     {
       icon: TrendingUp,
-      title: "Best Forex Trading Signals",
-      description: "Receive accurate, AI-driven buy and sell alerts from our expert analysts and maximize your trading potential every day.",
+      title: "Premium Trading Signals",
+      description: "Receive high-accuracy buy and sell signals from our 20+ expert analysts. Each signal includes entry, stop loss, and take profit levels.",
     },
     {
       icon: Shield,
-      title: "Risk Management Strategies",
-      description: "Protect your capital with proven risk management techniques and smart trading plans designed to reduce losses and increase consistency.",
+      title: "Professional Risk Management",
+      description: "Every signal comes with proven risk management strategies to protect your capital and maximize consistent profits.",
     },
     {
       icon: BarChart3,
-      title: "Market Research Methods",
-      description: "Our professional team uses advanced data analytics and technical tools to study global market trends and forecast profitable opportunities.",
+      title: "Advanced Market Analysis",
+      description: "Get access to daily market research, technical analysis, and forecasts powered by advanced data analytics and expert insights.",
     },
   ];
 
@@ -77,11 +80,11 @@ const Home = () => {
         <div className="container mx-auto px-4 relative z-10 pt-20">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-              Empowering Traders Worldwide with{" "}
-              <span className="text-gradient animate-shimmer bg-[length:200%_100%]">Expert Signals</span>
+              Premium Forex Signal Provider for{" "}
+              <span className="text-gradient animate-shimmer bg-[length:200%_100%]">Smart Traders</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 animate-slide-up [animation-delay:200ms] opacity-0 [animation-fill-mode:forwards]">
-              Start your journey with Fintrex Forex Solutions – a trusted global forex broker providing accurate trading signals, market research, and risk management strategies for beginners and professionals alike.
+              Join Fintrex Forex Solutions – your trusted global signal provider delivering accurate trading signals, deep market research, and professional risk management for traders worldwide.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 animate-slide-up [animation-delay:400ms] opacity-0 [animation-fill-mode:forwards]">
               <Link to="/contact">
@@ -106,10 +109,10 @@ const Home = () => {
       <section className="py-20 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Why Choose Fintrex?</h2>
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-4xl font-bold mb-4">Why Choose Fintrex Signal Provider?</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              We combine technology, intelligence, and global market insights to help you make smarter trading decisions.
+              We deliver premium trading signals powered by expert analysis, advanced technology, and 10+ years of market intelligence.
             </p>
           </div>
           
@@ -131,14 +134,45 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Signal Showcase Section */}
       <section className="py-20 bg-muted/30 relative overflow-hidden">
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-float-delayed"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Our Services</h2>
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+            <div className="animate-slide-up">
+              <h2 className="text-4xl font-bold mb-6">Professional Signal Analysis</h2>
+              <p className="text-muted-foreground text-lg mb-6">
+                Our expert team analyzes market data 24/7 to deliver precise trading signals with high accuracy rates. Every signal includes complete trade details and risk management parameters.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
+                  <span className="text-foreground">Real-time signal delivery via multiple channels</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
+                  <span className="text-foreground">Detailed entry, stop loss, and take profit levels</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
+                  <span className="text-foreground">Risk-reward ratio analysis for every trade</span>
+                </div>
+              </div>
+            </div>
+            <div className="relative animate-fade-in">
+              <img 
+                src={signalsDashboard} 
+                alt="Professional trading signals dashboard" 
+                className="rounded-2xl shadow-card w-full hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
+            </div>
+          </div>
+
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-4xl font-bold mb-4">Our Signal Services</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Empowering traders with world-class forex solutions, expert signals, and strategic market insights.
+              Premium trading signals across multiple markets, all backed by expert analysis and proven strategies.
             </p>
           </div>
           
@@ -158,17 +192,56 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Team Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative order-2 lg:order-1 animate-fade-in">
+              <img 
+                src={teamAnalysis} 
+                alt="Expert analysis team" 
+                className="rounded-2xl shadow-card w-full hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute -top-6 -left-6 w-32 h-32 bg-accent/20 rounded-full blur-3xl animate-pulse"></div>
+            </div>
+            <div className="order-1 lg:order-2 animate-slide-up">
+              <h2 className="text-4xl font-bold mb-6">Expert Analysts, Professional Signals</h2>
+              <p className="text-muted-foreground text-lg mb-6">
+                Our team of 20+ professional analysts brings over 10 years of combined experience. We monitor global markets 24/7 to identify the best trading opportunities and deliver signals with 98% accuracy.
+              </p>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="text-center p-6 gradient-card rounded-xl border border-border hover:scale-105 transition-transform">
+                  <div className="text-4xl font-bold text-gradient mb-2">20+</div>
+                  <div className="text-muted-foreground">Expert Analysts</div>
+                </div>
+                <div className="text-center p-6 gradient-card rounded-xl border border-border hover:scale-105 transition-transform">
+                  <div className="text-4xl font-bold text-gradient mb-2">98%</div>
+                  <div className="text-muted-foreground">Signal Accuracy</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 gradient-hero relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl animate-scale-pulse"></div>
+        <div className="absolute top-20 right-20">
+          <img 
+            src={growthVisualization} 
+            alt="Growth visualization" 
+            className="w-64 h-64 object-cover rounded-2xl opacity-20 animate-float"
+          />
+        </div>
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-4xl font-bold mb-6 animate-fade-in">Ready to Start Trading Smarter?</h2>
+          <h2 className="text-4xl font-bold mb-6 animate-fade-in">Start Receiving Premium Signals Today</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-slide-up [animation-delay:100ms] opacity-0 [animation-fill-mode:forwards]">
-            Partner with Fintrex Forex Solutions and take your trading journey to the next level.
+            Join 50,000+ traders who trust Fintrex for professional trading signals and market intelligence.
           </p>
           <Link to="/contact">
             <Button size="lg" className="gradient-primary shadow-glow text-lg px-8 hover:scale-110 transition-all duration-300 animate-pulse-glow animate-slide-up [animation-delay:200ms] opacity-0 [animation-fill-mode:forwards]">
-              Contact Us Today
+              Get Started Now
             </Button>
           </Link>
         </div>
