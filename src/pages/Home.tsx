@@ -80,7 +80,7 @@ const Home = () => {
         <div className="container mx-auto px-4 relative z-10 pt-20">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-              Premium Forex Signal Provider for{" "}
+              Expert Forex Signal Provider for{" "}
               <span className="text-gradient animate-shimmer bg-[length:200%_100%]">Smart Traders</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 animate-slide-up [animation-delay:200ms] opacity-0 [animation-fill-mode:forwards]">
