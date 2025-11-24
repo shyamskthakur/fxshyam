@@ -6,9 +6,7 @@ import { Button } from "@/components/ui/button";
 import { TrendingUp, Shield, BarChart3, Bitcoin, Coins, TrendingDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-forex.jpg";
-import signalsDashboard from "@/assets/signals-dashboard.jpg";
-import teamAnalysis from "@/assets/team-analysis.jpg";
-import growthVisualization from "@/assets/growth-visualization.jpg";
+import { TradingViewWidget, MarketOverviewWidget } from "@/components/TradingViewWidget";
 
 const Home = () => {
   const services = [
@@ -138,6 +136,11 @@ const Home = () => {
       <section className="py-20 bg-muted/30 relative overflow-hidden">
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-float-delayed"></div>
         <div className="container mx-auto px-4 relative z-10">
+          <div className="mb-16 animate-fade-in">
+            <h2 className="text-4xl font-bold mb-8 text-center">Live Market Analysis</h2>
+            <MarketOverviewWidget />
+          </div>
+
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
             <div className="animate-slide-up">
               <h2 className="text-4xl font-bold mb-6">Professional Signal Analysis</h2>
@@ -160,12 +163,7 @@ const Home = () => {
               </div>
             </div>
             <div className="relative animate-fade-in">
-              <img 
-                src={signalsDashboard} 
-                alt="Professional trading signals dashboard" 
-                className="rounded-2xl shadow-card w-full hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
+              <TradingViewWidget symbol="FX:EURUSD" height={450} />
             </div>
           </div>
 
@@ -197,12 +195,7 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 lg:order-1 animate-fade-in">
-              <img 
-                src={teamAnalysis} 
-                alt="Expert analysis team" 
-                className="rounded-2xl shadow-card w-full hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute -top-6 -left-6 w-32 h-32 bg-accent/20 rounded-full blur-3xl animate-pulse"></div>
+              <TradingViewWidget symbol="BINANCE:BTCUSDT" height={450} />
             </div>
             <div className="order-1 lg:order-2 animate-slide-up">
               <h2 className="text-4xl font-bold mb-6">Expert Analysts, Professional Signals</h2>
@@ -227,13 +220,6 @@ const Home = () => {
       {/* CTA Section */}
       <section className="py-20 gradient-hero relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl animate-scale-pulse"></div>
-        <div className="absolute top-20 right-20">
-          <img 
-            src={growthVisualization} 
-            alt="Growth visualization" 
-            className="w-64 h-64 object-cover rounded-2xl opacity-20 animate-float"
-          />
-        </div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl font-bold mb-6 animate-fade-in">Start Receiving Premium Signals Today</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-slide-up [animation-delay:100ms] opacity-0 [animation-fill-mode:forwards]">
