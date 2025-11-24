@@ -24,7 +24,7 @@ export const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <img alt="Fintrex Forex Solutions" src="/lovable-uploads/af18a866-0662-486e-a0e5-46436821dff8.png" className="h-20 md:h-[89.6px] w-auto transition-all duration-300 group-hover:scale-105 group-hover:shadow-glow object-fill" />
+            <img alt="Fintrex Forex Solutions" src="/lovable-uploads/af18a866-0662-486e-a0e5-46436821dff8.png" className="h-20 md:h-[89.6px] w-auto transition-all duration-300 group-hover:scale-105 group-hover:shadow-glow object-cover" />
           </Link>
 
           {/* Desktop Navigation */}
