@@ -7,65 +7,51 @@ import { TrendingUp, Shield, BarChart3, Bitcoin, Coins, TrendingDown } from "luc
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-forex.jpg";
 import { TradingViewWidget, MarketOverviewWidget } from "@/components/TradingViewWidget";
-
 const Home = () => {
-  const services = [
-    {
-      icon: TrendingUp,
-      title: "Forex Signals",
-      description: "Receive accurate real-time forex signals with entry points, stop loss, and take profit levels from expert analysts.",
-      href: "/services/forex",
-    },
-    {
-      icon: Bitcoin,
-      title: "Crypto Signals",
-      description: "Navigate the digital market confidently with our professional crypto signals and technical analysis.",
-      href: "/services/crypto",
-    },
-    {
-      icon: Coins,
-      title: "Comex Signals",
-      description: "Get precise commodity signals for gold, silver, and metals with clear entry and exit strategies.",
-      href: "/services/comex",
-    },
-    {
-      icon: BarChart3,
-      title: "Indices Signals",
-      description: "Trade global indices confidently with our expert research-backed signals and market insights.",
-      href: "/services/indices",
-    },
-  ];
-
-  const features = [
-    {
-      icon: TrendingUp,
-      title: "Premium Trading Signals",
-      description: "Receive high-accuracy buy and sell signals from our 20+ expert analysts. Each signal includes entry, stop loss, and take profit levels.",
-    },
-    {
-      icon: Shield,
-      title: "Professional Risk Management",
-      description: "Every signal comes with proven risk management strategies to protect your capital and maximize consistent profits.",
-    },
-    {
-      icon: BarChart3,
-      title: "Advanced Market Analysis",
-      description: "Get access to daily market research, technical analysis, and forecasts powered by advanced data analytics and expert insights.",
-    },
-  ];
-
-  return (
-    <div className="min-h-screen">
+  const services = [{
+    icon: TrendingUp,
+    title: "Forex Signals",
+    description: "Receive accurate real-time forex signals with entry points, stop loss, and take profit levels from expert analysts.",
+    href: "/services/forex"
+  }, {
+    icon: Bitcoin,
+    title: "Crypto Signals",
+    description: "Navigate the digital market confidently with our professional crypto signals and technical analysis.",
+    href: "/services/crypto"
+  }, {
+    icon: Coins,
+    title: "Comex Signals",
+    description: "Get precise commodity signals for gold, silver, and metals with clear entry and exit strategies.",
+    href: "/services/comex"
+  }, {
+    icon: BarChart3,
+    title: "Indices Signals",
+    description: "Trade global indices confidently with our expert research-backed signals and market insights.",
+    href: "/services/indices"
+  }];
+  const features = [{
+    icon: TrendingUp,
+    title: "Premium Trading Signals",
+    description: "Receive high-accuracy buy and sell signals from our 20+ expert analysts. Each signal includes entry, stop loss, and take profit levels."
+  }, {
+    icon: Shield,
+    title: "Professional Risk Management",
+    description: "Every signal comes with proven risk management strategies to protect your capital and maximize consistent profits."
+  }, {
+    icon: BarChart3,
+    title: "Advanced Market Analysis",
+    description: "Get access to daily market research, technical analysis, and forecasts powered by advanced data analytics and expert insights."
+  }];
+  return <div className="min-h-screen">
       <Navigation />
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Animated background */}
         <div className="absolute inset-0">
-          <div 
-            className="absolute inset-0 bg-cover bg-center transition-transform duration-[20s] hover:scale-105"
-            style={{ backgroundImage: `url(${heroImage})` }}
-          >
+          <div className="absolute inset-0 bg-cover bg-center transition-transform duration-[20s] hover:scale-105" style={{
+          backgroundImage: `url(${heroImage})`
+        }}>
             <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/70"></div>
           </div>
           
@@ -77,7 +63,7 @@ const Home = () => {
         
         <div className="container mx-auto px-4 relative z-10 pt-20">
           <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in my-[60px]">
               Expert Forex Signal Provider for{" "}
               <span className="text-gradient animate-shimmer bg-[length:200%_100%]">Smart Traders</span>
             </h1>
@@ -115,19 +101,15 @@ const Home = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div 
-                key={index} 
-                className="gradient-card p-8 rounded-xl border border-border shadow-card animate-slide-up opacity-0 [animation-fill-mode:forwards] hover:scale-105 hover:shadow-glow transition-all duration-300 group" 
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
+            {features.map((feature, index) => <div key={index} className="gradient-card p-8 rounded-xl border border-border shadow-card animate-slide-up opacity-0 [animation-fill-mode:forwards] hover:scale-105 hover:shadow-glow transition-all duration-300 group" style={{
+            animationDelay: `${index * 150}ms`
+          }}>
                 <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
                   <feature.icon className="text-primary group-hover:animate-pulse" size={32} />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4">{feature.title}</h3>
                 <p className="text-muted-foreground">{feature.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -175,17 +157,13 @@ const Home = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => (
-              <div 
-                key={index}
-                className="animate-slide-up opacity-0 [animation-fill-mode:forwards]"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
+            {services.map((service, index) => <div key={index} className="animate-slide-up opacity-0 [animation-fill-mode:forwards]" style={{
+            animationDelay: `${index * 100}ms`
+          }}>
                 <div className="group hover:scale-105 hover:-rotate-1 transition-all duration-300">
                   <ServiceCard {...service} />
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -234,8 +212,6 @@ const Home = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Home;
