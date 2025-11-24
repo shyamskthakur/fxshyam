@@ -2,37 +2,29 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import fintrexLogo from "@/assets/fintrex-logo.png";
-
 export const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const services = [
-    { name: "Forex Trading", href: "/services/forex" },
-    { name: "Crypto Trading", href: "/services/crypto" },
-    { name: "Comex Trading", href: "/services/comex" },
-    { name: "Indices Trading", href: "/services/indices" },
-  ];
-
-  return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+  const services = [{
+    name: "Forex Trading",
+    href: "/services/forex"
+  }, {
+    name: "Crypto Trading",
+    href: "/services/crypto"
+  }, {
+    name: "Comex Trading",
+    href: "/services/comex"
+  }, {
+    name: "Indices Trading",
+    href: "/services/indices"
+  }];
+  return <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <img 
-              src={fintrexLogo} 
-              alt="Fintrex Forex Solutions" 
-              className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
-            />
+            <img src={fintrexLogo} alt="Fintrex Forex Solutions" className="h-12 w-auto transition-transform duration-300 group-hover:scale-105 object-cover" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -50,18 +42,13 @@ export const Navigation = () => {
                   <NavigationMenuTrigger className="bg-transparent">Services</NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-card border-border">
                     <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
-                      {services.map((service) => (
-                        <li key={service.name}>
+                      {services.map(service => <li key={service.name}>
                           <NavigationMenuLink asChild>
-                            <Link
-                              to={service.href}
-                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                            >
+                            <Link to={service.href} className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                               <div className="text-sm font-medium leading-none">{service.name}</div>
                             </Link>
                           </NavigationMenuLink>
-                        </li>
-                      ))}
+                        </li>)}
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
@@ -82,17 +69,13 @@ export const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden text-foreground"
-          >
+          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden text-foreground">
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden py-4 space-y-4 animate-fade-in">
+        {mobileMenuOpen && <div className="md:hidden py-4 space-y-4 animate-fade-in">
             <Link to="/" className="block text-foreground hover:text-primary transition-colors py-2">
               Home
             </Link>
@@ -101,15 +84,9 @@ export const Navigation = () => {
             </Link>
             <div className="space-y-2">
               <div className="text-muted-foreground text-sm font-semibold py-2">Services</div>
-              {services.map((service) => (
-                <Link
-                  key={service.name}
-                  to={service.href}
-                  className="block text-foreground hover:text-primary transition-colors py-2 pl-4"
-                >
+              {services.map(service => <Link key={service.name} to={service.href} className="block text-foreground hover:text-primary transition-colors py-2 pl-4">
                   {service.name}
-                </Link>
-              ))}
+                </Link>)}
             </div>
             <Link to="/market-insights" className="block text-foreground hover:text-primary transition-colors py-2">
               Market Insights
@@ -118,9 +95,7 @@ export const Navigation = () => {
               Contact
             </Link>
             <Button className="w-full gradient-primary shadow-glow">Get Started</Button>
-          </div>
-        )}
+          </div>}
       </div>
-    </nav>
-  );
+    </nav>;
 };
