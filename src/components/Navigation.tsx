@@ -56,7 +56,10 @@ export const Navigation = () => {
             </NavigationMenu>
 
             <Link to="/market-insights" className="text-foreground hover:text-primary transition-colors">
-              Market Insights
+              Research
+            </Link>
+            <Link to="/blog" className="text-foreground hover:text-primary transition-colors">
+              Blog
             </Link>
             <Link to="/contact" className="text-foreground hover:text-primary transition-colors">
               Contact
@@ -89,7 +92,10 @@ export const Navigation = () => {
                 </Link>)}
             </div>
             <Link to="/market-insights" className="block text-foreground hover:text-primary transition-colors py-2">
-              Market Insights
+              Research
+            </Link>
+            <Link to="/blog" className="block text-foreground hover:text-primary transition-colors py-2">
+              Blog
             </Link>
             <Link to="/contact" className="block text-foreground hover:text-primary transition-colors py-2">
               Contact

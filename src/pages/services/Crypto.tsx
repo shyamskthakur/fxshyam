@@ -3,6 +3,8 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Bitcoin, Shield, TrendingUp, Zap, Lock, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { PricingCard } from "@/components/PricingCard";
+import { cryptoPricing } from "@/data/pricingPlans";
 
 const Crypto = () => {
   const features = [
@@ -158,6 +160,24 @@ const Crypto = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Crypto Trading Pricing Plans</h2>
+            <p className="text-muted-foreground text-lg">
+              Choose the perfect plan for your cryptocurrency trading journey
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {cryptoPricing.map((plan, index) => (
+              <PricingCard key={index} plan={plan} />
+            ))}
           </div>
         </div>
       </section>

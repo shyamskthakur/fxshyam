@@ -7,6 +7,7 @@ import { TrendingUp, Shield, BarChart3, Bitcoin, Coins, TrendingDown } from "luc
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-forex.jpg";
 import { TradingViewWidget, MarketOverviewWidget } from "@/components/TradingViewWidget";
+import { HomePricingSection } from "@/components/HomePricingSection";
 
 const Home = () => {
   const services = [
@@ -216,6 +217,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Pricing Section */}
+      <HomePricingSection />
 
       {/* CTA Section */}
       <section className="py-20 gradient-hero relative overflow-hidden">
