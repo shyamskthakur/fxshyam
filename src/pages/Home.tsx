@@ -87,7 +87,7 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <StatsSection className="mx-[11px] my-[30px]" />
+      <StatsSection />
 
       {/* Features Section */}
       <section className="py-20 relative overflow-hidden">

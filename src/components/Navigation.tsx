@@ -55,8 +55,17 @@ export const Navigation = () => {
               </NavigationMenuList>
             </NavigationMenu>
 
-            <Link to="/market-insights" className="text-foreground hover:text-primary transition-colors">
-              Market Insights
+            <Link to="/research" className="text-foreground hover:text-primary transition-colors">
+              Research
+            </Link>
+            <Link to="/copy-trading" className="text-foreground hover:text-primary transition-colors">
+              Copy Trading
+            </Link>
+            <Link to="/blog" className="text-foreground hover:text-primary transition-colors">
+              Blog
+            </Link>
+            <Link to="/pricing" className="text-foreground hover:text-primary transition-colors">
+              Pricing
             </Link>
             <Link to="/contact" className="text-foreground hover:text-primary transition-colors">
               Contact
@@ -88,8 +97,17 @@ export const Navigation = () => {
                   {service.name}
                 </Link>)}
             </div>
-            <Link to="/market-insights" className="block text-foreground hover:text-primary transition-colors py-2">
-              Market Insights
+            <Link to="/research" className="block text-foreground hover:text-primary transition-colors py-2">
+              Research
+            </Link>
+            <Link to="/copy-trading" className="block text-foreground hover:text-primary transition-colors py-2">
+              Copy Trading
+            </Link>
+            <Link to="/blog" className="block text-foreground hover:text-primary transition-colors py-2">
+              Blog
+            </Link>
+            <Link to="/pricing" className="block text-foreground hover:text-primary transition-colors py-2">
+              Pricing
             </Link>
             <Link to="/contact" className="block text-foreground hover:text-primary transition-colors py-2">
               Contact
