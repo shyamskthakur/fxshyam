@@ -3,6 +3,8 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { BarChart3, TrendingUp, Globe, Target, Shield, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
+import { PricingCard } from "@/components/PricingCard";
+import { indicesPricing } from "@/data/pricingPlans";
 
 const Indices = () => {
   const majorIndices = [
@@ -244,6 +246,24 @@ const Indices = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Indices Trading Pricing Plans</h2>
+            <p className="text-muted-foreground text-lg">
+              Choose your plan to start trading global indices
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {indicesPricing.map((plan, index) => (
+              <PricingCard key={index} plan={plan} />
+            ))}
           </div>
         </div>
       </section>

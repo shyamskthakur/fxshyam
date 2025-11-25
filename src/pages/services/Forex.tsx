@@ -3,6 +3,8 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { TrendingUp, Shield, BarChart3, Clock, Target, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import { PricingCard } from "@/components/PricingCard";
+import { forexPricing } from "@/data/pricingPlans";
 
 const Forex = () => {
   const benefits = [
@@ -166,6 +168,24 @@ const Forex = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Forex Signal Pricing Plans</h2>
+            <p className="text-muted-foreground text-lg">
+              Choose the plan that best fits your trading goals and experience level
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {forexPricing.map((plan, index) => (
+              <PricingCard key={index} plan={plan} />
+            ))}
           </div>
         </div>
       </section>
