@@ -10,10 +10,7 @@ import Forex from "./pages/services/Forex";
 import Crypto from "./pages/services/Crypto";
 import Comex from "./pages/services/Comex";
 import Indices from "./pages/services/Indices";
-import Research from "./pages/Research";
-import CopyTrading from "./pages/CopyTrading";
-import Blog from "./pages/Blog";
-import Pricing from "./pages/Pricing";
+import MarketInsights from "./pages/MarketInsights";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -33,10 +30,7 @@ const App = () => (
           <Route path="/services/crypto" element={<Crypto />} />
           <Route path="/services/comex" element={<Comex />} />
           <Route path="/services/indices" element={<Indices />} />
-          <Route path="/research" element={<Research />} />
-          <Route path="/copy-trading" element={<CopyTrading />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/market-insights" element={<MarketInsights />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

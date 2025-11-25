@@ -24,7 +24,7 @@ export const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <img alt="Fintrex Forex Solutions" className="h-20 md:h-[89.6px] w-auto transition-all duration-300 group-hover:scale-105 group-hover:shadow-glow object-cover" src="/lovable-uploads/46718f40-6712-4f7c-8ea6-7e12ce495e25.png" />
+            <img alt="Fintrex Forex Solutions" src="/lovable-uploads/af18a866-0662-486e-a0e5-46436821dff8.png" className="h-20 md:h-[89.6px] w-auto transition-all duration-300 group-hover:scale-105 group-hover:shadow-glow object-cover" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -55,17 +55,8 @@ export const Navigation = () => {
               </NavigationMenuList>
             </NavigationMenu>
 
-            <Link to="/research" className="text-foreground hover:text-primary transition-colors">
-              Research
-            </Link>
-            <Link to="/copy-trading" className="text-foreground hover:text-primary transition-colors">
-              Copy Trading
-            </Link>
-            <Link to="/blog" className="text-foreground hover:text-primary transition-colors">
-              Blog
-            </Link>
-            <Link to="/pricing" className="text-foreground hover:text-primary transition-colors">
-              Pricing
+            <Link to="/market-insights" className="text-foreground hover:text-primary transition-colors">
+              Market Insights
             </Link>
             <Link to="/contact" className="text-foreground hover:text-primary transition-colors">
               Contact
@@ -97,17 +88,8 @@ export const Navigation = () => {
                   {service.name}
                 </Link>)}
             </div>
-            <Link to="/research" className="block text-foreground hover:text-primary transition-colors py-2">
-              Research
-            </Link>
-            <Link to="/copy-trading" className="block text-foreground hover:text-primary transition-colors py-2">
-              Copy Trading
-            </Link>
-            <Link to="/blog" className="block text-foreground hover:text-primary transition-colors py-2">
-              Blog
-            </Link>
-            <Link to="/pricing" className="block text-foreground hover:text-primary transition-colors py-2">
-              Pricing
+            <Link to="/market-insights" className="block text-foreground hover:text-primary transition-colors py-2">
+              Market Insights
             </Link>
             <Link to="/contact" className="block text-foreground hover:text-primary transition-colors py-2">
               Contact
