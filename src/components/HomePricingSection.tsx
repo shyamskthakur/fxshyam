@@ -38,7 +38,7 @@ export const HomePricingSection = () => {
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {services.map(service => {
             const Icon = service.icon;
-            return <button key={service.id} onClick={() => setSelectedService(service.id)} className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${selectedService === service.id ? "bg-gradient-primary text-primary-foreground shadow-glow scale-105" : "bg-card text-foreground border border-border hover:border-primary hover:scale-105"}`}>
+            return <button key={service.id} onClick={() => setSelectedService(service.id)} className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${selectedService === service.id ? "bg-primary text-primary-foreground shadow-glow scale-105" : "bg-accent text-accent-foreground hover:bg-primary/80 hover:text-primary-foreground hover:scale-105"}`}>
                   <Icon size={20} />
                   {service.name}
                 </button>;

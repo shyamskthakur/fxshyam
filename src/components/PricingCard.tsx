@@ -16,9 +16,9 @@ interface PricingCardProps {
 export const PricingCard = ({
   plan
 }: PricingCardProps) => {
-  return <Card className={`gradient-card border-border shadow-card hover:shadow-glow transition-all duration-300 relative ${plan.popular ? 'border-primary border-2 scale-105' : ''}`}>
-      {plan.popular && <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-          <span className="bg-gradient-primary text-primary-foreground rounded-full text-sm font-semibold shadow-glow py-[6px] text-left my-0 mx-0 px-[16px] mb-0 mt-0 pt-[6px]">
+  return <Card className={`gradient-card border-border shadow-card hover:shadow-glow transition-all duration-300 relative ${plan.popular ? 'border-primary border-2 scale-105 mt-6' : ''}`}>
+      {plan.popular && <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
+          <span className="bg-primary text-primary-foreground rounded-full text-sm font-semibold shadow-glow py-1.5 px-4 whitespace-nowrap">
             Most Popular
           </span>
         </div>}
