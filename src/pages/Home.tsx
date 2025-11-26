@@ -63,7 +63,7 @@ const Home = () => {
         </div>
         
         <div className="container mx-auto px-4 relative z-10 pt-20">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl py-[40px]">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
               Expert Forex Signal Provider for{" "}
               <span className="text-gradient animate-shimmer bg-[length:200%_100%]">Smart Traders</span>
