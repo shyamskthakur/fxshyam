@@ -68,7 +68,9 @@ export const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className="gradient-primary shadow-glow">Get Started</Button>
+            <Link to="/contact">
+              <Button className="gradient-primary shadow-glow">Get Started</Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -100,7 +102,9 @@ export const Navigation = () => {
             <Link to="/contact" className="block text-foreground hover:text-primary transition-colors py-2">
               Contact
             </Link>
-            <Button className="w-full gradient-primary shadow-glow">Get Started</Button>
+            <Link to="/contact">
+              <Button className="w-full gradient-primary shadow-glow">Get Started</Button>
+            </Link>
           </div>}
       </div>
     </nav>;
