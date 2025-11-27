@@ -1,15 +1,26 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle, XCircle, Home } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 const Contact = () => {
+  const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -55,7 +66,7 @@ const Contact = () => {
       });
 
       if (response.ok) {
-        alert("Message sent successfully! We'll get back to you soon.");
+        setSubmitStatus("success");
         setFormData({
           firstName: "",
           lastName: "",
@@ -65,19 +76,65 @@ const Contact = () => {
           message: "",
         });
       } else {
-        alert("Failed to send message. Please try again.");
+        setSubmitStatus("error");
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("Failed to send message. Please try again.");
+      setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
+      setDialogOpen(true);
     }
+  };
+
+  const handleGoBack = () => {
+    setDialogOpen(false);
+    navigate("/");
+  };
+
+  const handleCloseDialog = () => {
+    setDialogOpen(false);
+    setSubmitStatus(null);
   };
 
   return (
     <div className="min-h-screen">
       <Navigation />
+      
+      {/* Result Dialog */}
+      <Dialog open={dialogOpen} onOpenChange={handleCloseDialog}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2">
+              {submitStatus === "success" ? (
+                <>
+                  <CheckCircle className="text-green-500" size={24} />
+                  Message Sent Successfully!
+                </>
+              ) : (
+                <>
+                  <XCircle className="text-destructive" size={24} />
+                  Failed to Send Message
+                </>
+              )}
+            </DialogTitle>
+            <DialogDescription>
+              {submitStatus === "success"
+                ? "Thank you for contacting us. Our team will get back to you within 24 hours."
+                : "Something went wrong. Please try again later or contact us directly via phone or email."}
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex gap-4 mt-4">
+            <Button variant="outline" onClick={handleCloseDialog} className="flex-1">
+              Close
+            </Button>
+            <Button onClick={handleGoBack} className="flex-1 gradient-primary">
+              <Home className="mr-2" size={18} />
+              Go Back Home
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
       
       {/* Hero Section */}
       <section className="pt-32 pb-20 gradient-hero">
