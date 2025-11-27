@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -8,6 +9,15 @@ import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
   const contactInfo = [
     {
       icon: MapPin,
@@ -26,10 +36,43 @@ const Contact = () => {
     },
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted");
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://cloud.activepieces.com/api/v1/webhooks/oV0mslzzwpbb0hZRHzRMF", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert("Message sent successfully! We'll get back to you soon.");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -84,7 +127,10 @@ const Contact = () => {
                     <div className="space-y-2">
                       <Label htmlFor="firstName">First Name *</Label>
                       <Input 
-                        id="firstName" 
+                        id="firstName"
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleInputChange}
                         placeholder="John" 
                         className="bg-background border-border"
                         required 
@@ -93,7 +139,10 @@ const Contact = () => {
                     <div className="space-y-2">
                       <Label htmlFor="lastName">Last Name *</Label>
                       <Input 
-                        id="lastName" 
+                        id="lastName"
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleInputChange}
                         placeholder="Doe" 
                         className="bg-background border-border"
                         required 
@@ -105,8 +154,11 @@ const Contact = () => {
                     <div className="space-y-2">
                       <Label htmlFor="email">Email *</Label>
                       <Input 
-                        id="email" 
-                        type="email" 
+                        id="email"
+                        name="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
                         placeholder="john.doe@example.com" 
                         className="bg-background border-border"
                         required 
@@ -115,8 +167,11 @@ const Contact = () => {
                     <div className="space-y-2">
                       <Label htmlFor="phone">Phone Number</Label>
                       <Input 
-                        id="phone" 
-                        type="tel" 
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={handleInputChange}
                         placeholder="+1 (555) 123-4567" 
                         className="bg-background border-border"
                       />
@@ -126,7 +181,10 @@ const Contact = () => {
                   <div className="space-y-2">
                     <Label htmlFor="subject">Subject *</Label>
                     <Input 
-                      id="subject" 
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleInputChange}
                       placeholder="How can we help you?" 
                       className="bg-background border-border"
                       required 
@@ -136,7 +194,10 @@ const Contact = () => {
                   <div className="space-y-2">
                     <Label htmlFor="message">Message *</Label>
                     <Textarea 
-                      id="message" 
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
                       placeholder="Tell us more about your trading goals and how we can assist you..."
                       className="bg-background border-border min-h-[150px]"
                       required 
@@ -147,9 +208,10 @@ const Contact = () => {
                     type="submit" 
                     size="lg" 
                     className="w-full gradient-primary shadow-glow"
+                    disabled={isSubmitting}
                   >
                     <Send className="mr-2" size={20} />
-                    Send Message
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               </CardContent>
