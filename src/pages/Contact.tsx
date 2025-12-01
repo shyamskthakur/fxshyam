@@ -15,6 +15,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { CountrySelector } from "@/components/CountrySelector";
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -26,6 +27,7 @@ const Contact = () => {
     lastName: "",
     email: "",
     phone: "",
+    country: "",
     subject: "",
     message: "",
   });
@@ -72,6 +74,7 @@ const Contact = () => {
           lastName: "",
           email: "",
           phone: "",
+          country: "",
           subject: "",
           message: "",
         });
@@ -233,6 +236,14 @@ const Contact = () => {
                         className="bg-background border-border"
                       />
                     </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="country">Country *</Label>
+                    <CountrySelector
+                      value={formData.country}
+                      onChange={(value) => setFormData(prev => ({ ...prev, country: value }))}
+                    />
                   </div>
 
                   <div className="space-y-2">
