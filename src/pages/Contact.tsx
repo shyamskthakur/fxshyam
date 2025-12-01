@@ -35,7 +35,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Visit Us",
-      details: "Jl. Sunset Road No.815, Kuta, Bali 80361",
+      details: "Ras Al Khaimah, Dubai, UAE",
     },
     {
       icon: Phone,
@@ -295,7 +295,7 @@ const Contact = () => {
             <h2 className="text-4xl font-bold mb-8 text-center">Find Us</h2>
             <div className="gradient-card rounded-xl overflow-hidden border border-border shadow-card h-96">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.1893861945646!2d115.17684231478255!3d-8.69421209371477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd244a9d58c2c23%3A0x5030bfbca830c20!2sJl.%20Sunset%20Road%2C%20Kuta%2C%20Badung%20Regency%2C%20Bali!5e0!3m2!1sen!2sid!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230796.26764254045!2d55.65598565!3d25.6741246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef67049a1e2ed2b%3A0xf81c4d1b183e9c57!2sRas%20Al%20Khaimah!5e0!3m2!1sen!2sae!4v1234567890"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
