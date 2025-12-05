@@ -19,12 +19,12 @@ const About = () => {
     {
       icon: Users,
       title: "Expert Signal Team",
-      description: "Powered by 20+ professional analysts with 10+ years of experience, we deliver high-accuracy signals and deep market intelligence to traders worldwide.",
+      description: "Powered by 20+ professional analysts with 8+ years of experience, we deliver high-accuracy signals and deep market intelligence to traders worldwide.",
     },
     {
       icon: Award,
       title: "Proven Results",
-      description: "With a 98% signal accuracy rate and 50,000+ active subscribers, we've established ourselves as a trusted premium signal provider.",
+      description: "With a 78% signal accuracy rate and 12,000+ active subscribers, we've established ourselves as a trusted premium signal provider.",
     },
   ];
 

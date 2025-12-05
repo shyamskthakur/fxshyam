@@ -95,7 +95,7 @@ const Home = () => {
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-4xl font-bold mb-4">Why Choose Fintrex Signal Provider?</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              We deliver premium trading signals powered by expert analysis, advanced technology, and 10+ years of market intelligence.
+              We deliver premium trading signals powered by expert analysis, advanced technology, and 8+ years of market intelligence.
             </p>
           </div>
           
@@ -177,7 +177,7 @@ const Home = () => {
             <div className="order-1 lg:order-2 animate-slide-up">
               <h2 className="text-4xl font-bold mb-6">Expert Analysts, Professional Signals</h2>
               <p className="text-muted-foreground text-lg mb-6">
-                Our team of 20+ professional analysts brings over 10 years of combined experience. We monitor global markets 24/7 to identify the best trading opportunities and deliver signals with 98% accuracy.
+                Our team of 20+ professional analysts brings over 8 years of combined experience. We monitor global markets 24/7 to identify the best trading opportunities and deliver signals with 78% accuracy.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center p-6 gradient-card rounded-xl border border-border hover:scale-105 transition-transform">
@@ -185,7 +185,7 @@ const Home = () => {
                   <div className="text-muted-foreground">Expert Analysts</div>
                 </div>
                 <div className="text-center p-6 gradient-card rounded-xl border border-border hover:scale-105 transition-transform">
-                  <div className="text-4xl font-bold text-gradient mb-2">98%</div>
+                  <div className="text-4xl font-bold text-gradient mb-2">78%</div>
                   <div className="text-muted-foreground">Signal Accuracy</div>
                 </div>
               </div>

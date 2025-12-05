@@ -5,9 +5,9 @@ interface Stat {
 
 const stats: Stat[] = [
   { value: "20+", label: "Expert Analysts" },
-  { value: "10+", label: "Years Experience" },
-  { value: "50K+", label: "Active Traders" },
-  { value: "98%", label: "Success Rate" },
+  { value: "8+", label: "Years Experience" },
+  { value: "12K+", label: "Active Traders" },
+  { value: "78%", label: "Success Rate" },
 ];
 
 export const StatsSection = () => {
