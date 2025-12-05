@@ -8,7 +8,7 @@ import { forexPricing } from "@/data/pricingPlans";
 
 const Forex = () => {
   const benefits = [
-    "Real-time trading signals with 98% accuracy",
+    "Real-time trading signals with 78% accuracy",
     "24/7 market monitoring and analysis",
     "Expert risk management strategies",
     "Beginner-friendly guidance and support",
