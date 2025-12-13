@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Send, CheckCircle, XCircle, Home } from "lucide-react";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Dialog,
@@ -22,6 +23,7 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [dialogOpen, setDialogOpen] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
+  const [termsAccepted, setTermsAccepted] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -272,11 +274,26 @@ const Contact = () => {
                     />
                   </div>
 
+                  <div className="flex items-start space-x-3">
+                    <Checkbox 
+                      id="terms" 
+                      checked={termsAccepted}
+                      onCheckedChange={(checked) => setTermsAccepted(checked === true)}
+                      className="mt-1"
+                    />
+                    <Label 
+                      htmlFor="terms" 
+                      className="text-sm text-muted-foreground cursor-pointer leading-relaxed"
+                    >
+                      I accept the <span className="text-primary hover:underline">Terms and Conditions</span> and agree to the processing of my personal data.
+                    </Label>
+                  </div>
+
                   <Button 
                     type="submit" 
                     size="lg" 
                     className="w-full gradient-primary shadow-glow"
-                    disabled={isSubmitting}
+                    disabled={isSubmitting || !termsAccepted}
                   >
                     <Send className="mr-2" size={20} />
                     {isSubmitting ? "Sending..." : "Send Message"}
