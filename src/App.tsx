@@ -13,6 +13,7 @@ import Indices from "./pages/services/Indices";
 import Research from "./pages/Research";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/market-insights" element={<Research />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/terms" element={<Terms />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
