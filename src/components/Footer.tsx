@@ -14,6 +14,7 @@ export const Footer = () => {
     { name: "About Us", href: "/about" },
     { name: "Market Insights", href: "/market-insights" },
     { name: "Contact", href: "/contact" },
+    { name: "Terms & Conditions", href: "/terms" },
   ];
 
   return (

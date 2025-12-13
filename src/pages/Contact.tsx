@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -285,7 +285,7 @@ const Contact = () => {
                       htmlFor="terms" 
                       className="text-sm text-muted-foreground cursor-pointer leading-relaxed"
                     >
-                      I accept the <span className="text-primary hover:underline">Terms and Conditions</span> and agree to the processing of my personal data.
+                      I accept the <Link to="/terms" className="text-primary hover:underline">Terms and Conditions</Link> and agree to the processing of my personal data.
                     </Label>
                   </div>
 
