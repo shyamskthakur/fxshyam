@@ -24,11 +24,11 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <Link to="/" className="flex items-center space-x-3">
+            <Link to="/" className="inline-block">
               <img 
                 src={fintrexLogo} 
                 alt="Fintrex Logo" 
-                className="h-12 w-auto"
+                className="h-16 w-auto"
               />
             </Link>
             <p className="text-muted-foreground text-sm">
