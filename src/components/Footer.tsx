@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import fintrexLogo from "@/assets/fintrex-logo.png";
 
 export const Footer = () => {
   const services = [
@@ -23,12 +24,13 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <span className="text-2xl font-bold text-primary-foreground">F</span>
-              </div>
-              <span className="text-xl font-bold">Fintrex</span>
-            </div>
+            <Link to="/" className="flex items-center space-x-3">
+              <img 
+                src={fintrexLogo} 
+                alt="Fintrex Logo" 
+                className="h-12 w-auto"
+              />
+            </Link>
             <p className="text-muted-foreground text-sm">
               Premium Signal Provider. Expert Analysis. Proven Results.
             </p>
