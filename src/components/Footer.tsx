@@ -35,15 +35,6 @@ export const Footer = () => {
             <p className="text-muted-foreground text-sm">
               Delivering professional trading signals and market intelligence to traders worldwide.
             </p>
-            <a 
-              href="https://t.me/fintrexforexsolution" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
-            >
-              <Send size={20} />
-              <span className="text-sm">Join our Telegram</span>
-            </a>
           </div>
 
           {/* Services */}
@@ -95,6 +86,17 @@ export const Footer = () => {
               <li className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Mail size={16} className="flex-shrink-0" />
                 <span>support@example.com</span>
+              </li>
+              <li>
+                <a 
+                  href="https://t.me/fintrexforexsolution" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <Send size={16} className="flex-shrink-0" />
+                  <span>Telegram Channel</span>
+                </a>
               </li>
             </ul>
           </div>
