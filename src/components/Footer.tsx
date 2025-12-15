@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 export const Footer = () => {
   const services = [
@@ -35,6 +35,15 @@ export const Footer = () => {
             <p className="text-muted-foreground text-sm">
               Delivering professional trading signals and market intelligence to traders worldwide.
             </p>
+            <a 
+              href="https://t.me/fintrexforexsolution" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
+            >
+              <Send size={20} />
+              <span className="text-sm">Join our Telegram</span>
+            </a>
           </div>
 
           {/* Services */}
