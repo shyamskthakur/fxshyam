@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, MapPin, Send } from "lucide-react";
 import fintrexLogo from "@/assets/fintrex-logo.png";
 
 export const Footer = () => {
@@ -80,10 +80,6 @@ export const Footer = () => {
               <li className="flex items-start space-x-2 text-sm text-muted-foreground">
                 <MapPin size={16} className="mt-1 flex-shrink-0" />
                 <span>Ras Al Khaimah, Dubai, UAE</span>
-              </li>
-              <li className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <Phone size={16} className="flex-shrink-0" />
-                <span>(021) 231 - 2670</span>
               </li>
               <li className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Mail size={16} className="flex-shrink-0" />
