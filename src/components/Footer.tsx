@@ -123,8 +123,8 @@ export const Footer = () => {
               >
                 <Twitter size={20} />
               </a>
-              <a 
-                href="https://wa.me/447476699112" 
+            <a
+              href="https://wa.me/447476699112?text=Hello%20I%20want%20to%20know%20about%20your%20services"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/20 transition-colors"
