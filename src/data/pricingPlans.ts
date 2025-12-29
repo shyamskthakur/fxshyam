@@ -3,7 +3,7 @@ import { PricingPlan } from "@/components/PricingCard";
 export const forexPricing: PricingPlan[] = [
   {
     name: "Basic",
-    price: "99",
+    price: "199",
     period: "month",
     description: "Perfect for beginners starting their forex journey",
     features: [
@@ -17,7 +17,7 @@ export const forexPricing: PricingPlan[] = [
   },
   {
     name: "Professional",
-    price: "199",
+    price: "399",
     period: "month",
     description: "For serious traders looking for consistent profits",
     features: [
@@ -34,7 +34,7 @@ export const forexPricing: PricingPlan[] = [
   },
   {
     name: "Premium",
-    price: "399",
+    price: "699",
     period: "month",
     description: "Ultimate package for professional traders",
     features: [
@@ -156,7 +156,7 @@ export const comexPricing: PricingPlan[] = [
 export const indicesPricing: PricingPlan[] = [
   {
     name: "Basic",
-    price: "119",
+    price: "199",
     period: "month",
     description: "Trade major global indices",
     features: [
@@ -170,7 +170,7 @@ export const indicesPricing: PricingPlan[] = [
   },
   {
     name: "Professional",
-    price: "219",
+    price: "359",
     period: "month",
     description: "Advanced indices trading strategies",
     features: [
@@ -187,7 +187,7 @@ export const indicesPricing: PricingPlan[] = [
   },
   {
     name: "Premium",
-    price: "369",
+    price: "599",
     period: "month",
     description: "Complete indices market mastery",
     features: [
