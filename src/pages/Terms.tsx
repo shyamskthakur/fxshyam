@@ -191,8 +191,8 @@ const Terms = () => {
               <ul className="text-muted-foreground space-y-2">
                 <li><strong className="text-foreground">Company:</strong> Fintrex Forex Solutions</li>
                 <li><strong className="text-foreground">Address:</strong> Ras Al Khaimah, Dubai, UAE</li>
-                <li><strong className="text-foreground">Phone:</strong> (021) 231 - 2670</li>
-                <li><strong className="text-foreground">Email:</strong> support@example.com</li>
+                <li><strong className="text-foreground">Phone:</strong> +447476699112</li>
+                <li><strong className="text-foreground">Email:</strong> support@fintrexforexsolution.com</li>
               </ul>
             </div>
 
