@@ -105,7 +105,7 @@ export const cryptoPricing: PricingPlan[] = [
 export const comexPricing: PricingPlan[] = [
   {
     name: "Essential",
-    price: "129",
+    price: "249",
     period: "month",
     description: "Start trading gold, silver & commodities",
     features: [
@@ -119,7 +119,7 @@ export const comexPricing: PricingPlan[] = [
   },
   {
     name: "Advanced",
-    price: "229",
+    price: "449",
     period: "month",
     description: "Professional commodity trading",
     features: [
@@ -136,7 +136,7 @@ export const comexPricing: PricingPlan[] = [
   },
   {
     name: "Master",
-    price: "379",
+    price: "749",
     period: "month",
     description: "Master the commodity markets",
     features: [
