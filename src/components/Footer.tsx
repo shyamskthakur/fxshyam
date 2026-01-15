@@ -88,7 +88,7 @@ export const Footer = () => {
               </li>
               <li className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Mail size={16} className="flex-shrink-0" />
-                <span>support@fintrexforexsolution.com</span>
+                <span>fintrexforexsolution@gmail.com</span>
               </li>
               <li>
                 <a 
