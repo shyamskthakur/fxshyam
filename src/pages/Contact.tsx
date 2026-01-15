@@ -47,7 +47,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: "support@fintrexforexsolution.com",
+      details: "fintrexforexsolution@gmail.com",
     },
   ];
 
